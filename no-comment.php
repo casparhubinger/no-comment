@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       No Comment
  * Description:       A plugin to close, disable and remove comments from the WordPress admin UI.
- * Version:           0.2
+ * Version:           0.3
  * Author:            Caspar Hübinger
  * Plugin URI:        https://github.com/glueckpress/no-comment/
  * GitHub Plugin URI: https://github.com/glueckpress/no-comment
@@ -31,6 +31,9 @@ function no_comment() {
 		trailingslashit( dirname( plugin_basename( __FILE__ ) ) ) . 'l10n/'
 	);
 
+	// Filterable priority.
+	$prio = apply_filters( 'no_comment__ego', 1000 );
+
 	/**
 	 * Set existing comments to unapproved.
 	 *
@@ -45,36 +48,51 @@ function no_comment() {
 			);
 			wp_update_comment( $commentarr );
 		}
-	}, 1000 );
+	}, $prio );
 
 	/**
 	 * Close comments on all published posts of all post types.
+	 * This may come costly on sites with many posts, but it seems more reliable than
+	 * comments_open/pings_open filters.
 	 *
 	 * @return void
 	 */
 	add_action( 'after_setup_theme', function () {
+
+		// Stop here if we have done this before.
+		if ( 'closed' === get_option( 'no_comment__posts_closed' ) )
+			return;
+
 		$posts = get_posts( array( 'post_type' => 'any', 'posts_per_page' => -1 ) );
 		foreach ( $posts as $post ) {
-			if ( $post->comment_status !== 'closed' ) {
+			if ( 'closed' !== $post->comment_status || 'closed' !== $post->ping_status ) {
 				$postarr = array(
 					'ID'             => $post->ID,
-					'comment_status' => 'closed'
+					'comment_status' => 'closed',
+					'ping_status'    => 'closed',
 				);
 				wp_update_post( $postarr );
 			}
 		}
-	}, 1000 );
+
+		// No need doing this again, global comment/ping status for new posts will be closed.
+		update_option( 'no_comment__posts_closed', 'closed' );
+
+	}, $prio );
 
 	/**
-	 * Set default comment status to closed.
+	 * Set default comment/ping status to closed.
 	 *
 	 * @return void
 	 */
 	add_action( 'after_setup_theme', function () {
-		if( 'closed' !== get_option( 'default_comment_status' ) ) {
-			update_option( 'default_comment_status', 'closed' );
+		$status_types = array( 'default_comment_status', 'default_ping_status' );
+		foreach ( $status_types as $status_type ) {
+			if( 'closed' !== get_option( $status_type ) ) {
+				update_option( $status_type, 'closed' );
+			}
 		}
-	} );
+	}, $prio );
 
 	/**
 	 * Remove comments and discussion menu pages from admin menu.
@@ -84,7 +102,7 @@ function no_comment() {
 	add_action( 'admin_menu', function () {
 		remove_menu_page( 'edit-comments.php' );
 		remove_submenu_page( 'options-general.php', 'options-discussion.php' );
-	} );
+	}, $prio );
 
 	/**
 	 * Remove comment menu item from admin bar.
@@ -93,20 +111,25 @@ function no_comment() {
 	 */
 	add_action( 'wp_before_admin_bar_render', function () {
 		$GLOBALS[ 'wp_admin_bar' ]->remove_menu( 'comments' );
-	} );
+	}, $prio );
 
 	/**
 	 * Removes post type support for comments from all registered post types.
+	 * Will also remove Allow Comments/Pings checkboxes from QuickEdit.
 	 *
 	 * @return void
 	 */
 	add_action( 'init', function () {
 		$post_types = get_post_types();
+		$comment_types = array( 'comments', 'trackbacks' );
 		foreach ( $post_types as $post_type ) {
-			if ( post_type_supports( $post_type, 'comments' ) )
-				remove_post_type_support( $post_type, 'comments' );
+			foreach ( $comment_types as $comment_type ) {
+				if ( post_type_supports( $post_type, $comment_type ) ) {
+					remove_post_type_support( $post_type, $comment_type );
+				}
+			}
 		}
-	}, 1000 );
+	}, $prio );
 
 	/**
 	 * Remove default comments widget.
@@ -115,7 +138,7 @@ function no_comment() {
 	 */
 	add_action( 'widgets_init', function() {
 		unregister_widget( 'WP_Widget_Recent_Comments' );
-	}, 1000 );
+	}, $prio );
 
 	/**
 	 * Remove comments from the Dashboard by cloning the Activity widget.
@@ -153,10 +176,12 @@ function no_comment() {
 				echo '</div>';
 			}
 		);
-	} );
+	}, $prio );
 
 	/**
 	 * Display admin notice after activation.
+	 *
+	 * @return void
 	 */
 	add_action( 'admin_notices', function () {
 		$message = get_transient( 'no_comment_plugin_activation' );
