@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: No Comment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Thu Sep 10 2015 11:42:00 GMT+0200 (CEST)\n"
-"POT-Revision-Date: Thu Sep 10 2015 11:42:24 GMT+0200 (CEST)\n"
+"POT-Revision-Date: Thu Sep 10 2015 20:10:41 GMT+0200 (CEST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -35,11 +35,13 @@ msgid "Set previously published comments to unapproved."
 msgstr ""
 
 #: ../inc/activation.php:43
-msgid "Closed comments on all published posts of all post types."
+msgid ""
+"Closed comments on all published posts of all post types once. (Future "
+"status handled by global default status.)"
 msgstr ""
 
 #: ../inc/activation.php:44
-msgid "Set default comment status to closed."
+msgid "Set global default comment status to closed."
 msgstr ""
 
 #: ../inc/activation.php:45
@@ -93,4 +95,16 @@ msgstr ""
 msgid ""
 "Imagine: Somewhere someone is tearing their hair out over a problem right "
 "now, and it’s not you!"
+msgstr ""
+
+#: ../inc/activation.php:73
+msgid "So the plural of “status” is… “status”. You knew that, didn’t you?"
+msgstr ""
+
+# plugin name
+msgid "No Comment"
+msgstr ""
+
+# plugin description
+msgid "A plugin to close, disable and remove comments from the WordPress admin UI."
 msgstr ""
