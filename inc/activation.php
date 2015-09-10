@@ -40,11 +40,11 @@ function no_comment__get_activation_message() {
 	$message  = sprintf( '<p>%s</p>', __( '<strong>No Comment</strong> has been activated and has performed the following operations:', 'no-comment' ) );
 	$message .= '<ul class="ul-square">';
 	$message .= sprintf( '<li>%s</li>', __( 'Set previously published comments to unapproved.', 'no-comment' ) );
-	$message .= sprintf( '<li>%s</li>', __( 'Closed comments on all published posts of all post types once. (Future status handled by global default status.)', 'no-comment' ) );
-	$message .= sprintf( '<li>%s</li>', __( 'Set global default comment status to closed.', 'no-comment' ) );
+	$message .= sprintf( '<li>%s</li>', __( 'Closed comments and pings on all published posts of all post types once. (Future status handled by global default status.)', 'no-comment' ) );
+	$message .= sprintf( '<li>%s</li>', __( 'Set global default comment and ping status to closed.', 'no-comment' ) );
 	$message .= sprintf( '<li>%s</li>', __( 'Removed comments and discussion menu pages from admin menu.', 'no-comment' ) );
 	$message .= sprintf( '<li>%s</li>', __( 'Removed the comment menu item from admin bar.', 'no-comment' ) );
-	$message .= sprintf( '<li>%s</li>', __( 'Removed post type support for comments from all registered post types.', 'no-comment' ) );
+	$message .= sprintf( '<li>%s</li>', __( 'Removed post type support for comments and trackbacks from all registered post types.', 'no-comment' ) );
 	$message .= sprintf( '<li>%s</li>', __( 'Removed the default comments widget.', 'no-comment' ) );
 	$message .= sprintf( '<li>%s</li>', __( 'Removed comments from the Dashboard by cloning the Activity widget.', 'no-comment' ) );
 	$message .= '</ul>';
