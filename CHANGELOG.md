@@ -1,5 +1,11 @@
 # No Comment Changelog
 
+## 0.3
+* Added support for ping status closed.
+* Added option to prevent costly DB queries.
+* Added filterable master priority.
+* Updated POT file.
+
 ## 0.2
 * Added i18n.
 * Added admin notice after activation.

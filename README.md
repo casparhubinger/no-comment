@@ -4,14 +4,17 @@ A plugin to close, disable and remove comments from the WordPress admin UI.
 
 ### What this plugin does:
 - Sets previously published comments to _unapproved_.
-- Closes comments on all published posts of all post types.
-- Sets default comment status to closed.
+- Closes comments and pings on all published posts of all post types once. (Future status handled by global default status.)
+- Sets global default comment and ping status to closed.
 - Removes comments and discussion menu pages from admin menu.
 - Removes the comment menu item from admin bar.
-- Removes post type support for comments from all registered post types.
+- Removes post type support for comments and trackbacks from all registered post types.
 - Removes the default comments widget.
 - Removes comments from the Dashboard by cloning the Activity widget. ([before](https://github.com/glueckpress/no-comment/blob/master/assets/img/screenshot-2.png)/[after](https://github.com/glueckpress/no-comment/blob/master/assets/img/screenshot-3.png))
 
 ### Requirements:
 - PHP 5.3+
 - WordPress 4.1+
+
+### License
+- [General Public License v3](http://www.gnu.org/licenses/gpl-3.0.html)
