@@ -1,0 +1,96 @@
+# Loco Gettext template
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: No Comment\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Thu Sep 10 2015 11:42:00 GMT+0200 (CEST)\n"
+"POT-Revision-Date: Thu Sep 10 2015 11:42:24 GMT+0200 (CEST)\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: ../inc/activation.php:40
+msgid ""
+"<strong>No Comment</strong> has been activated and has performed the "
+"following operations:"
+msgstr ""
+
+#: ../inc/activation.php:42
+msgid "Set previously published comments to unapproved."
+msgstr ""
+
+#: ../inc/activation.php:43
+msgid "Closed comments on all published posts of all post types."
+msgstr ""
+
+#: ../inc/activation.php:44
+msgid "Set default comment status to closed."
+msgstr ""
+
+#: ../inc/activation.php:45
+msgid "Removed comments and discussion menu pages from admin menu."
+msgstr ""
+
+#: ../inc/activation.php:46
+msgid "Removed the comment menu item from admin bar."
+msgstr ""
+
+#: ../inc/activation.php:47
+msgid "Removed post type support for comments from all registered post types."
+msgstr ""
+
+#: ../inc/activation.php:48
+msgid "Removed the default comments widget."
+msgstr ""
+
+#: ../inc/activation.php:49
+msgid "Removed comments from the Dashboard by cloning the Activity widget."
+msgstr ""
+
+#: ../inc/activation.php:51
+msgid ""
+"<strong>TL;DR</strong>: Previously published comments have not been deleted. "
+"When you deactivate the plugin, they will reappear as <em>unapproved</em> in "
+"your moderation queue."
+msgstr ""
+
+#: ../inc/activation.php:67
+msgid "Hey, neat hairdo!"
+msgstr ""
+
+#: ../inc/activation.php:68
+msgid "Is it tea time yet?"
+msgstr ""
+
+#: ../inc/activation.php:69
+msgid "“Where have all the comments gone, long time passing…”"
+msgstr ""
+
+#: ../inc/activation.php:70
+msgid "Hey, you’ve nailed this. How about giving yourself a treat?"
+msgstr ""
+
+#: ../inc/activation.php:71
+msgid "Ok, moar coffee now…"
+msgstr ""
+
+#: ../inc/activation.php:72
+msgid ""
+"Imagine: Somewhere someone is tearing their hair out over a problem right "
+"now, and it’s not you!"
+msgstr ""
