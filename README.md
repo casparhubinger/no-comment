@@ -10,7 +10,7 @@ A plugin to close, disable and remove comments from the WordPress admin UI.
 - Removes the comment menu item from admin bar.
 - Removes post type support for comments and trackbacks from all registered post types.
 - Removes the default comments widget.
-- Removes comments from the Dashboard by cloning the Activity widget. ([before/after](https://github.com/glueckpress/no-comment/blob/master/assets/img/screenshot-5.png))
+- Removes comments from the Dashboard by cloning the Activity widget. ([before/after](https://github.com/glueckpress/no-comment/blob/master/assets/img/screenshot-5.jpg))
 - Removes comment feed link from wp_head.
 
 ### Requirements:
