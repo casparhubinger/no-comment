@@ -17,7 +17,5 @@ A plugin to close, disable and remove comments from the WordPress admin UI.
 - PHP 5.3+
 - WordPress 4.1+
 
-are 2 major operations that may come costly on sites with a lot of posts or comments
-
 ### License
 - [General Public License v3](http://www.gnu.org/licenses/gpl-3.0.html)
