@@ -52,9 +52,15 @@ function no_comment__get_activation_message() {
 
 	$message .= sprintf(
 		'<p><a href="%1$s" class="button-primary">%2$s</a>&#160;&#160;&#160;<a href="%3$s" class="button-secondary">%4$s</a></p>',
-		esc_url_raw( add_query_arg( array( 'no-comment' => 'run' ) ) ),
+		wp_nonce_url(
+			esc_url_raw( add_query_arg( array( 'no-comment' => 'run' ) ) ),
+			'no_comment_activating'
+		),
 		__( 'Yes, let’s do this', 'no-comment' ),
-		esc_url_raw( add_query_arg( array( 'no-comment' => 'abort' ) ) ),
+		wp_nonce_url(
+			esc_url_raw( add_query_arg( array( 'no-comment' => 'abort' ) ) ),
+			'no_comment_aborting'
+		),
 		__( 'No, abort', 'no-comment' )
 	);
 

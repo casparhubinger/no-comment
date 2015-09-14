@@ -80,6 +80,7 @@ function no_comment() {
 		case 'run':
 			include_once( 'inc/run.php' );
 			add_action( 'admin_notices', function () {
+				check_admin_referer( 'no_comment_activating' );
 				$message  = no_comment__activation_success_message();
 				no_comment__admin_notice( $message, 'notice-success is-dismissible' );
 			} );
@@ -89,6 +90,7 @@ function no_comment() {
 		// Abort and display message once.
 		case 'abort':
 			add_action( 'admin_notices', function () {
+				check_admin_referer( 'no_comment_aborting' );
 				$message  = no_comment__activation_abort_message();
 				no_comment__admin_notice( $message, 'notice-warning is-dismissible' );
 			} );
