@@ -1,5 +1,8 @@
 # No Comment Changelog
 
+## 0.5
+* Added composer.json. Props @Chrico!
+
 ## 0.4
 * Added confirmation dialogue after plugin activation. (Plugin will “soft”-activate, actual operations take place only after promted user confirmation.)
 * Added support for removing comment feeds from wp_head.

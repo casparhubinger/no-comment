@@ -1,0 +1,26 @@
+{
+    "name": "glueckpress/no-comment",
+    "description": "A plugin to close, disable and remove comments from the WordPress admin UI.",
+    "version": "0.5",
+    "type": "wordpress-plugin",
+    "keywords": [
+        "comments"
+    ],
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Caspar Hübinger",
+            "email": "glueck@glueckpress.com",
+            "homepage": "https://profiles.wordpress.org/glueckpress",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/glueckpress/no-comment/issues",
+        "source": "https://github.com/glueckpress/no-comment/issues",
+        "docs": "https://github.com/glueckpress/no-comment/blob/master/README.md"
+    },
+    "require": {
+        "php": ">=5.3",
+    }
+}
