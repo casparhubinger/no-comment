@@ -21,6 +21,6 @@
         "docs": "https://github.com/glueckpress/no-comment/blob/master/README.md"
     },
     "require": {
-        "php": ">=5.3",
+        "php": ">=5.3"
     }
 }
