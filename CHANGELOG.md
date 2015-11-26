@@ -1,5 +1,8 @@
 # No Comment Changelog
 
+## 0.6
+* Fixed composer.json.
+
 ## 0.5
 * Added composer.json. Props @Chrico!
 
