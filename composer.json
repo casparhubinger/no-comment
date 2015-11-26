@@ -1,7 +1,7 @@
 {
     "name": "glueckpress/no-comment",
     "description": "A plugin to close, disable and remove comments from the WordPress admin UI.",
-    "version": "0.5",
+    "version": "0.6",
     "type": "wordpress-plugin",
     "keywords": [
         "comments"
