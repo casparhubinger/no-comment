@@ -2,11 +2,11 @@
 /**
  * Plugin Name:       No Comment
  * Description:       A plugin to close, disable and remove comments from the WordPress admin UI.
- * Version:           0.6
+ * Version:           0.6.0
  * Author:            Caspar Hübinger
- * Plugin URI:        https://github.com/glueckpress/no-comment/
- * GitHub Plugin URI: https://github.com/glueckpress/no-comment
- * Author URI:        https://profiles.wordpress.org/glueckpress
+ * Plugin URI:        https://github.com/casparhubinger/no-comment/
+ * GitHub Plugin URI: https://github.com/casparhubinger/no-comment
+ * Author URI:        https://caspar.blog
  * License: GNU       General Public License v3
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain:       no-comment
